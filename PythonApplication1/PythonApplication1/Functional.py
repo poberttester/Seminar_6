@@ -1,4 +1,5 @@
 # ������
+from random import randint
 
 # 1. Фрукты
 # Пользователь вводит число K - количество фруктов. Затем он вводит K фруктов в формате: название фрукта и его количество. 
@@ -95,4 +96,28 @@ def longest_string_func(x):
 # "Пора учить английский язык", - сказал себе Степа и решил написать программу для изучения английского языка. 
 # Программа получает на вход слово на английском языке и несколько его переводов на русском языке. 
 # Составьте словарь, в котором ключ - это английское слово, а значение - это список русских слов. 
+
+def create_language_dictionary():
+    def input_word():
+        return input("new word: ")
+    
+    def input_translate():
+        return input("translate: ")
+    
+    
+    N = int(input('numbers of words: '))
+    list_language_dictionary = [(input_word(), input_translate()) for i in range(N)]
+    
+    print(list_language_dictionary)
+
+# 4.Создайте список из случайных чисел. Найдите количество различных элементов в нем.
+def random_numbers_list():
+    
+    list = []
+    for i in range(0, 10):
+        list.append(randint(0, 101))
+    
+        
+    print(list)
+
 
