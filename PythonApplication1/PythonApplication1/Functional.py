@@ -1,5 +1,5 @@
-# ������
-from random import randint
+
+import random
 
 # 1. Фрукты
 # Пользователь вводит число K - количество фруктов. Затем он вводит K фруктов в формате: название фрукта и его количество. 
@@ -34,8 +34,6 @@ def create_fiends():
     list_friend = [(input_name(), input_age()) for i in range(N)]
     
     return list_friend
-
-
     
 
 def youngest_friend(list_friend):
@@ -92,6 +90,8 @@ def longest_string_func(x):
     return longest_string
 
 
+
+
 # 4. Английский словарь
 # "Пора учить английский язык", - сказал себе Степа и решил написать программу для изучения английского языка. 
 # Программа получает на вход слово на английском языке и несколько его переводов на русском языке. 
@@ -110,14 +110,20 @@ def create_language_dictionary():
     
     print(list_language_dictionary)
 
+
+
+
 # 4.Создайте список из случайных чисел. Найдите количество различных элементов в нем.
-def random_numbers_list():
-    
+def create_random_numbers():
+    N = random.randint(10, 21)
+
     list = []
-    for i in range(0, 10):
-        list.append(randint(0, 101))
-    
-        
-    print(list)
+    for i in range(N):
+        list.append(random.randrange(0, 10))
+
+
+    return list
+
+find_unique_values = lambda list: print('Количество уникальных элементов:', len(set(list)), set(list))
 
 
